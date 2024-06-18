@@ -32,5 +32,5 @@ RC(3,0)                         RC(3,4) RC(3,5) RC(7,5) RC(7,4)                 
             , <&gpio1 4  GPIO_ACTIVE_HIGH>
             , <&gpio1 6  GPIO_ACTIVE_HIGH>
             ;
-    }
+    };
 };

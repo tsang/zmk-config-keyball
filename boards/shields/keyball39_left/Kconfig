@@ -1,0 +1,7 @@
+// zmk/app/boards/shields/keyball39_left/Kconfig
+config SHIELD_KEYBALL39_LEFT
+    bool "Keyball39 Left Shield"
+    select BOARD_NICE_NANO_V2
+    select ZMK_ENCODER  // Ensure encoder support is selected
+    help
+        Enable support for the Keyball39 Left keyboard half.

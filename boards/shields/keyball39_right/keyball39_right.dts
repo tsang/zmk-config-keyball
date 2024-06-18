@@ -1,0 +1,31 @@
+// zmk/app/boards/shields/keyball39_right/keyball39_right.dts
+/ {
+    keyball39_right {
+        compatible = "zmk,keyboard";
+        key-matrix {
+            compatible = "zmk,matrix-transform";
+            rows = <5>;
+            columns = <5>;
+
+            row-gpios = <&gpio0 0 GPIO_ACTIVE_LOW>,
+                        <&gpio0 1 GPIO_ACTIVE_LOW>,
+                        <&gpio0 2 GPIO_ACTIVE_LOW>,
+                        <&gpio0 3 GPIO_ACTIVE_LOW>,
+                        <&gpio0 4 GPIO_ACTIVE_LOW>;
+
+            col-gpios = <&gpio1 5 GPIO_ACTIVE_LOW>,
+                        <&gpio1 6 GPIO_ACTIVE_LOW>,
+                        <&gpio1 7 GPIO_ACTIVE_LOW>,
+                        <&gpio1 8 GPIO_ACTIVE_LOW>,
+                        <&gpio1 9 GPIO_ACTIVE_LOW>;
+        };
+
+        pmw3360: pmw3360@0 {
+            compatible = "pixart,pmw3360";
+            spi-max-frequency = <1000000>;
+            reg = <0>;
+            int-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+            spi-cs-gpios = <&gpio0 7 GPIO_ACTIVE_LOW>;
+        };
+    };
+};

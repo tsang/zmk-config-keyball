@@ -1,0 +1,23 @@
+if SHIELD_KEYBALL39_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "Keyball39 (left)"
+
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y 
+
+endif
+
+if SHIELD_KEYBALL39_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "Keyball39 (right)"
+
+endif
+
+if SHIELD_KEYBALL39_LEFT || SHIELD_KEYBALL39_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+endif

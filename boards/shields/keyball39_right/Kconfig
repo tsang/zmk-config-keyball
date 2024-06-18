@@ -1,7 +1,0 @@
-// zmk/app/boards/shields/keyball39_right/Kconfig
-config SHIELD_KEYBALL39_RIGHT
-    bool "Keyball39 Right Shield"
-    select BOARD_NICE_NANO_V2
-    select PWM3360  // Ensure PWM3360 support is selected
-    help
-        Enable support for the Keyball39 Right keyboard half.

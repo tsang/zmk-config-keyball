@@ -42,7 +42,7 @@
 &kp Z     &kp X    &kp C     &kp V     &kp J                                  &kp B     &kp G     &kp COMMA     &kp DOT   &kp SEMI
 &lt RAISE BSPC                               &lt LOWER SPACE &mt LALT TAB   &mt LSHFT DEL &lto LOWER LOWER                           &lt RAISE RET
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         LOWER {
@@ -53,7 +53,7 @@
 &kp BSPC                                    &to DEFAULT  &mt LALT TAB  &mt LSHFT DEL     &none                                                 &kp RET
             >;
             
-            sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>
+            sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
         };
 
         RAISE {

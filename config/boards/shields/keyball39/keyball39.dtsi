@@ -21,7 +21,6 @@ RC(3,0)                         RC(3,4) RC(3,5) RC(7,5) RC(7,4)                 
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN";
 
         diode-direction = "col2row";
         col-gpios

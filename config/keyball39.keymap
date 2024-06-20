@@ -21,7 +21,15 @@
 
 / {
     behaviors {
-
+        lto: layer_tap_to {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <800>;
+            quick-tap-ms = <200>;
+            bindings = <&lt>, <&to>;
+            hold-trigger-key-positions = <1>;
+        }
     };
     
     keymap {
@@ -32,7 +40,7 @@
 &kp Y     &kp W    &kp F     &kp L     &kp M                                  &kp K     &kp P     &kp O     &kp Q     &kp SINGLE_QUOTE
 &kp U     &kp R    &mt LCTRL S     &mt LWIN N     &kp H                                  &kp D     &mt LWIN T     &mt RCTRL E     &kp A     &kp I
 &kp Z     &kp X    &kp C     &kp V     &kp J                                  &kp B     &kp G     &kp COMMA     &kp DOT   &kp SEMI
-&lt RAISE BSPC                               &kp SPACE &mt LALT TAB   &mt LSHFT DEL &to LOWER                               &lt RAISE RET
+&lt RAISE BSPC                               &lt LOWER SPACE &mt LALT TAB   &mt LSHFT DEL &lto LOWER LOWER                           &lt RAISE RET
             >;
         };
 

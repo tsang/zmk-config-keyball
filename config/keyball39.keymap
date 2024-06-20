@@ -32,7 +32,7 @@
 &kp Y     &kp W    &kp F     &kp L     &kp M                                  &kp K     &kp P     &kp O     &kp Q     &kp SINGLE_QUOTE
 &kp U     &kp R    &mt LCTRL S     &mt LWIN N     &kp H                                  &kp D     &mt LWIN T     &mt RCTRL E     &kp A     &kp I
 &kp Z     &kp X    &kp C     &kp V     &kp J                                  &kp B     &kp G     &kp COMMA     &kp DOT   &kp SEMI
-&kp BSPC                               &kp SPACE &mt LALT TAB   &mt LSHFT DEL &to LOWER                               &kp RET
+&lt LOWER BSPC                               &kp SPACE &mt LALT TAB   &mt LSHFT DEL &to LOWER                               &lt RAISE RET
             >;
         };
 
@@ -41,7 +41,7 @@
 &kp ESC     &kp AT    &kp POUND     &kp DOLLAR    &kp PRCNT                                    &kp CARET     &kp AMPS     &kp ASTRK     &kp SEMI     &kp BSPC
 &kp TAB     &kp LPAR  &kp LBRC      &kp FSLH      &kp LT                                       &kp GT        &kp BSLH     &kp RBRC      &kp RPAR     &kp ENTER
 &kp INS     &kp PIPE  &kp MINUS     &kp LBKT      &kp EXCL                                     &kp QMARK     &kp RBKT     &kp EQUAL     &kp GRAVE    &to RAISE
-&kp BSPC                                          &to DEFAULT  &mt LALT TAB  &mt LSHFT DEL     &to RAISE                                             &kp BSPC
+&kp BSPC                                          &to DEFAULT  &mt LALT TAB  &mt LSHFT DEL     &to RAISE                                             &lt RAISE RET
             >;
         };
 
@@ -50,7 +50,7 @@
 &kp Q     &kp KP_N7    &kp KP_N8     &kp KP_N9     &kp KP_N0                       &kp Y     &kp U     &kp I     &kp O     &kp P
 &kp A     &kp KP_N4    &kp KP_N5     &kp KP_N6     &kp COLON                       &kp H     &kp J     &kp K     &kp L     &kp SEMI
 &kp Z     &kp KP_N1    &kp KP_N2     &kp KP_N3     &kp UNDER                       &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH
-&kp BSPC                                           &to LOWER   &kp LBKT  &kp RBKT  &kp GRAVE                               &kp BSPC
+&lt DEFAULT BSPC                                           &to LOWER   &kp LBKT  &kp RBKT  &kp GRAVE                               &kp BSPC
             >;
         };
     };

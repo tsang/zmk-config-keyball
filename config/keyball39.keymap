@@ -45,7 +45,7 @@
             bindings = <
 &kp ESC     &kp AT    &kp POUND     &kp DOLLAR    &kp PRCNT                            &kp CARET     &kp AMPS     &kp ASTRK     &kp SEMI     &kp BSPC
 &kp TAB     &kp LPAR  &kp LBRC      &kp FSLH      &kp LT                               &kp GT        &kp BSLH     &kp RBRC      &kp RPAR     &kp ENTER
-&kp INS     &kp PIPE  &kp MINUS     &kp LBRK      &kp EXCL                             &kp QMARK     &kp RBKT     &kp EQUAL     &kp GRAVE    &to RAISE
+&kp INS     &kp PIPE  &kp MINUS     &kp LBKT      &kp EXCL                             &kp QMARK     &kp RBKT     &kp EQUAL     &kp GRAVE    &to RAISE
 &kp BSPC                                         &to default_layer   &mt LALT TAB  &mt LSHFT DEL     &to RAISE                               &kp BSPC
             >;
         };

@@ -29,7 +29,7 @@
             quick-tap-ms = <200>;
             bindings = <&lt>, <&to>;
             hold-trigger-key-positions = <1>;
-        }
+        };
     };
     
     keymap {

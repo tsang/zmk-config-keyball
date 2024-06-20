@@ -10,17 +10,13 @@
 // Handy to use these tap/holds
 
 &mt {
-    flavor = "hold-preferred";
-    tapping-term-ms = <500>;
+    flavor = "balanced";
+    tapping-term-ms = <800>;
 };
 
 &lt {
     flavor = "balanced";
     tapping-term-ms = <150>;
-};
-
-&sl {
-    release-after-ms = <2000>;
 };
 
 / {

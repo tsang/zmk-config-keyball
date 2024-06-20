@@ -2,6 +2,7 @@
 
 / {
     chosen {
+        zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
     };
@@ -21,8 +22,9 @@ RC(3,0)                         RC(3,4) RC(3,5) RC(7,5) RC(7,4)                 
 
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
+        wakeup-source;
 
-        diode-direction = "row2col";
+        diode-direction = "col2row";
         row-gpios
             = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -38,5 +40,40 @@ RC(3,0)                         RC(3,4) RC(3,5) RC(7,5) RC(7,4)                 
             , <&pro_micro 8  GPIO_ACTIVE_HIGH>
             , <&pro_micro 9  GPIO_ACTIVE_HIGH>
             ;
+    };
+
+    bottom_encoder: encoder_bottom {
+        compatible = "alps,ec11";
+        label = "BOTTOM_ENCODER";
+        a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <30>;
+        status = "disabled";
+    };
+
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&bottom_encoder>;
+        triggers-per-rotation = <15>;
+    };
+};
+
+&pro_micro_i2c {
+    status = "okay";
+
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x3c>;
+        width = <128>;
+        height = <32>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <31>;
+        segment-remap;
+        com-invdir;
+        com-sequential;
+        inversion-on;
+        prechargep = <0x22>;
     };
 };

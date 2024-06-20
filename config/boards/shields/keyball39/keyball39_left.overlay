@@ -1,3 +1,6 @@
 // zmk/app/boards/shields/keyball39/keyball39_left.overlay
 #include "keyball39.dtsi"
 
+&bottom_encoder {
+    status = "okay";
+};

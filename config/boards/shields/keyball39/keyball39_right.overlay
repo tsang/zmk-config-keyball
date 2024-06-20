@@ -4,12 +4,3 @@
 &default_transform { // The matrix transform for this board is 4 rows over because the left half is 4 rows tall according to the matrix.
     row-offset = <4>;
 };
-
-&kscan0 {
-    row-gpios
-        = <&gpio0 31 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 2  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio1 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        ;
-};

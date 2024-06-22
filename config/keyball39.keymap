@@ -21,15 +21,7 @@
 
 / {
     behaviors {
-        lto: layer_tap_to {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <800>;
-            quick-tap-ms = <200>;
-            bindings = <&mo>, <&to>;
-            hold-trigger-key-positions = <1>;
-        };
+
     };
     
     keymap {
@@ -38,9 +30,9 @@
         default_layer {
             bindings = < 
 &kp Y           &kp W           &kp F           &kp L           &kp M                           &kp K           &kp P           &kp O           &kp Q           &kp SINGLE_QUOTE
-&kp U           &kp R           &mt LCTRL S     &mt LWIN N      &kp H                           &kp D           &mt RWIN T      &mt RCTRL E     &kp A           &kp I
+&kp U           &kp R           &mt LCTRL S     &mt LWIN N      &kp H                           &kp D           &mt LWIN T      &mt RCTRL E     &kp A           &kp I
 &kp Z           &kp X           &kp C           &kp V           &kp J                           &kp B           &kp G           &kp COMMA       &kp DOT         &kp SEMI
-&lt RAISE BSPC                                  &lt LOWER SPACE &mt LALT TAB    &mt LSHFT DEL   &lto LOWER LOWER                                                &lt RAISE RET
+&lt RAISE BSPC                                  &lt LOWER SPACE &mt LALT TAB    &mt LSHFT DEL   &lt LOWER HOME                                                  &lt RAISE RET
             >;
             //sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
@@ -48,9 +40,9 @@
         LOWER {
             bindings = <
 &kp ESC         &kp AT          &kp POUND       &kp DOLLAR      &kp PRCNT                       &kp CARET       &kp AMPS        &kp ASTRK       &kp SEMI        &kp BSPC
-&kp TAB         &kp LPAR        &mt LCTRL LBRC  &mt LWIN FSLH   &kp LT                          &kp GT          &mt RWIN BSLH   &mt RCTRL RBRC  &kp RPAR        &kp ENTER
-&kp INS         &kp PIPE        &kp MINUS       &kp LBKT        &kp EXCL                        &kp QMARK       &kp RBKT        &kp EQUAL       &kp GRAVE       &kp ATTENTION
-&kp BSPC                                        &to DEFAULT     &mt LALT TAB    &mt LSHFT DEL   &kp RALT                                                        &kp RET
+&kp TAB         &kp LPAR        &mt LCTRL LBRC  &mt LWIN FSLH   &kp LT                          &kp GT          &mt LWIN BSLH   &mt RCTRL RBRC  &kp RPAR        &kp ENTER
+&kp INS         &kp PIPE        &kp MINUS       &kp LBKT        &kp EXCL                        &kp QMARK       &kp RBKT        &kp EQUAL       &kp GRAVE       &kp RALT
+&kp BSPC                                        &to DEFAULT     &kp RALT        &kp RSHFT       &to LOWER                                                       &kp RET
             >;
             //sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
         };
@@ -59,8 +51,8 @@
             bindings = <
 &kp Q           &kp KP_N7       &kp KP_N8       &kp KP_N9       &kp KP_N0                       &kp C_VOL_UP    &kp PAGE_UP     &kp UP          &kp PAGE_DOWN   &kp P
 &kp A           &kp KP_N4       &kp KP_N5       &kp KP_N6       &kp COLON                       &kp C_MUTE      &kp LEFT        &kp DOWN        &kp RIGHT       &kp SEMI
-&kp Z           &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp UNDER                       &kp C_VOL_UP    &kp K_PREV      &kp C_PP        &kp K_NEXT      &kp FSLH
-&soft_off                                       &bt BT_PRV      &bootloader     &bt BT_DISC     &bt BT_NXT                                                      &soft_off
+&kp Z           &kp KP_N1       &kp KP_N2       &kp KP_N3       &kp UNDER                       &kp C_VOL_UP    &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp FSLH
+&soft_off                                       &to DEFAULT     &bootloader     &bt BT_DISC 0   &to RAISE                                                       &soft_off
             >;
             //sensor-bindings = <&inc_dec_kp C_RW C_FF>;
         };

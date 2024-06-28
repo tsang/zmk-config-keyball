@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
@@ -49,9 +50,9 @@
 
         RAISE {
             bindings = <
-&kp ASTRK       &kp N7          &kp N8          &kp N9          &kp MINUS                       &kp C_VOL_UP    &kp PAGE_UP     &kp UP          &kp PAGE_DOWN   &kp P
-&kp FSLH        &kp N4          &kp N5          &kp N6          &kp PLUS                        &kp C_MUTE      &kp LEFT        &kp DOWN        &kp RIGHT       &kp SEMI
-&kp DOT         &kp N1          &kp N2          &kp N3          &kp ENTER                       &kp C_VOL_DN    &kp C_PREV      &kp C_PP        &kp C_NEXT      &kp FSLH
+&kp ASTRK       &kp N7          &kp N8          &kp N9          &kp MINUS                       &kp C_VOL_UP    &kp PAGE_UP     &kp UP          &kp PAGE_DOWN   &kp C_PREV
+&kp FSLH        &kp N4          &kp N5          &kp N6          &kp PLUS                        &kp C_MUTE      &kp LEFT        &kp DOWN        &kp RIGHT       &kp C_PP
+&kp DOT         &kp N1          &kp N2          &kp N3          &kp ENTER                       &kp C_VOL_DN    &mkp LCLK       &mkp MCLK       &mkp RCLK       &kp C_NEXT
 &kp N0                                          &to DEFAULT     &bootloader     &bt BT_DISC 0   &to RAISE                                                       &soft_off
             >;
             //sensor-bindings = <&inc_dec_kp C_RW C_FF>;

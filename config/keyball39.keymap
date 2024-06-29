@@ -7,6 +7,7 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
+#define ZMK_MOUSE_SCRL_VAL 140
 
 // Handy to use these tap/holds
 
@@ -22,7 +23,12 @@
 
 / {
     behaviors {
-
+        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+	        compatible = "zmk,behavior-sensor-rotate";
+            tap-ms = <20>;
+	        #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
     };
     
     keymap {
@@ -55,7 +61,7 @@
 &kp DOT         &kp N1          &kp N2          &kp N3          &kp ENTER                       &kp C_VOL_DN    &mkp LCLK       &mkp MCLK       &mkp RCLK       &kp C_NEXT
 &kp N0                                          &to DEFAULT     &bootloader     &bt BT_DISC 0   &to RAISE                                                       &soft_off
             >;
-            //sensor-bindings = <&inc_dec_kp C_RW C_FF>;
+            sensor-bindings = <&scroll_up_down>;
         };
     };
 };

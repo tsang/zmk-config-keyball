@@ -23,11 +23,24 @@
 
 / {
     behaviors {
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
+        /* This is still in an open PR - https://github.com/zmkfirmware/zmk/pull/2027
+        volume_encoder: volume_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+        };
+        selection_encoder: selection_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp LS(UP)>, <&kp LS(DOWN)>;
+        };
+        scroll_encoder: scroll_encoder {
 	        compatible = "zmk,behavior-sensor-rotate";
+            #sensor-bniding-cells = <0>;
             tap-ms = <20>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
+        */
     };
     
     keymap {
@@ -40,7 +53,7 @@
 &kp Z           &kp X           &kp C           &kp V           &kp J                           &kp B           &kp G           &kp COMMA       &kp DOT         &kp SEMI
 &lt RAISE BSPC                                  &lt LOWER SPACE &mt LALT TAB    &mt LSHFT DEL   &lt LOWER HOME                                                  &lt RAISE RET
             >;
-            //sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+            //sensor-bindings = <&volume_encoder>;
         };
 
         LOWER {
@@ -50,7 +63,7 @@
 &kp INS         &kp PIPE        &kp MINUS       &kp LBKT        &kp EXCL                        &kp QMARK       &kp RBKT        &kp EQUAL       &kp GRAVE       &kp RALT
 &kp BSPC                                        &to DEFAULT     &kp RALT        &kp RSHFT       &to LOWER                                                       &kp RET
             >;
-            //sensor-bindings = <&inc_dec_kp C_BRI_DEC C_BRI_INC>;
+            //sensor-bindings = <&selection_encoder>;
         };
 
         RAISE {
@@ -60,7 +73,7 @@
 &kp DOT         &kp N1          &kp N2          &kp N3          &kp ENTER                       &kp C_VOL_DN    &mkp LCLK       &mkp MCLK       &mkp RCLK       &kp C_NEXT
 &kp N0                                          &to DEFAULT     &bootloader     &bt BT_DISC 0   &to RAISE                                                       &soft_off
             >;
-            sensor-bindings = <&scroll_up_down>;
+            //sensor-bindings = <&scroll_encoder>;
         };
     };
 };

@@ -45,8 +45,6 @@ RC(3,0)                         RC(3,4) RC(3,5) RC(7,5) RC(7,4)                 
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        // Eventually, left click with this 
-        c-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <30>;
         status = "disabled";
     }; 

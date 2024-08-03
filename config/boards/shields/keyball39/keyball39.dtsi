@@ -6,6 +6,15 @@
         zmk,matrix_transform = &default_transform;
     };
 
+    gpio_keys: gpio_keys {
+        compatible: "gpio-keys";
+        ec11_button: ec11_button {
+            label = "EC11 Button";
+            gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+            keycode = <EC11>;
+        }
+    };
+
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         columns = <6>;
@@ -48,6 +57,7 @@ RC(3,0)                         RC(3,4) RC(3,5) RC(7,5) RC(7,4)                 
         steps = <30>;
         status = "disabled";
     }; 
+    
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&bottom_encoder>;

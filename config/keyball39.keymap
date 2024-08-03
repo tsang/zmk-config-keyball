@@ -32,15 +32,21 @@
         selection_encoder: selection_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&kp LS(UP)>, <&kp LS(DOWN)>;
+            bindings = <&kp LS(DOWL)>, <&kp LS(UP)>;
         };
         scroll_encoder: scroll_encoder {
 	        compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             tap-ms = <20>;
-            bindings = <&kp UP>, <&kp DOWN>;
+            bindings = <&kp DOWN>, <&kp UP>;
             //bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
+
+        ec11_button: ec11_button {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "EC11 Button";
+            bindings = <&mkp LCLK>;
+        }
         
     };
     
@@ -53,6 +59,7 @@
 &kp U           &kp R           &mt LCTRL S     &mt LWIN N      &kp H                           &kp D           &mt LWIN T      &mt RCTRL E     &kp A           &kp I
 &kp Z           &kp X           &kp C           &kp V           &kp J                           &kp B           &kp G           &kp COMMA       &kp DOT         &kp SEMI
 &lt RAISE BSPC                                  &lt LOWER SPACE &mt LALT TAB    &mt LSHFT DEL   &lt LOWER HOME                                                  &lt RAISE RET
+&ec11_button
             >;
             sensor-bindings = <&volume_encoder>;
         };

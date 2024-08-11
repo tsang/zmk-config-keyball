@@ -35,7 +35,7 @@
             bindings = <&kp LS(DOWN)>, <&kp LS(UP)>;
         };
         scroll_encoder: scroll_encoder {
-	        compatible = "zmk,behavior-sensor-rotate-var";
+	        compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             tap-ms = <5>;
             //bindings = <&kp DOWN>, <&kp UP>;

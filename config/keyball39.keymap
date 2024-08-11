@@ -37,7 +37,7 @@
         scroll_encoder: scroll_encoder {
 	        compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            tap-ms = <20>;
+            tap-ms = <5>;
             bindings = <&kp DOWN>, <&kp UP>;
             //bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
@@ -53,7 +53,7 @@
 &kp Z           &kp X           &kp C           &kp V           &kp J                           &kp B           &kp G           &kp COMMA       &kp DOT         &kp SEMI
 &lt RAISE BSPC                                  &lt LOWER SPACE &mt LALT TAB    &mt LSHFT DEL   &lt LOWER HOME                                                  &lt RAISE RET
             >;
-            sensor-bindings = <&volume_encoder>;
+            sensor-bindings = <&scroll_encoder>;
         };
 
         LOWER {
@@ -73,7 +73,7 @@
 &kp DOT         &kp N1          &kp N2          &kp N3          &kp ENTER                       &kp C_VOL_DN    &mkp LCLK       &mkp MCLK       &mkp RCLK       &kp C_NEXT
 &kp N0                                          &to DEFAULT     &bootloader     &bt BT_DISC 0   &to RAISE                                                       &soft_off
             >;
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&volume_encoder>;
         };
     };
 };

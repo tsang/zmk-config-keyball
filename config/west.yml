@@ -1,7 +1,7 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
+    - name: zmk
+      url-base: https://github.com/urob
     #- name: luberry
     #  url-base: https://github.com/luberry
     # Additional modules containing boards/shields/custom code can be listed here as well
@@ -12,8 +12,8 @@ manifest:
     #  revision: pmw3389
     #  import: app/west.yml
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: urob
+      revision: mouse-3.2
       import: app/west.yml
   self:
     path: config

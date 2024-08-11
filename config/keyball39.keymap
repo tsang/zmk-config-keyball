@@ -38,8 +38,8 @@
 	        compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             tap-ms = <5>;
-            bindings = <&kp DOWN>, <&kp UP>;
-            //bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            //bindings = <&kp DOWN>, <&kp UP>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };
     

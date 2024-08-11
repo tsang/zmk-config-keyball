@@ -1,6 +1,6 @@
 manifest:
   remotes:
-    - name: zmk
+    - name: urob
       url-base: https://github.com/urob
     #- name: luberry
     #  url-base: https://github.com/luberry
@@ -13,7 +13,7 @@ manifest:
     #  import: app/west.yml
     - name: zmk
       remote: urob
-      revision: mouse-3.2
+      revision: main
       import: app/west.yml
   self:
     path: config

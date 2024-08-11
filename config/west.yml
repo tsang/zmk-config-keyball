@@ -1,19 +1,13 @@
 manifest:
   remotes:
-    - name: urob
-      url-base: https://github.com/urob
-    #- name: luberry
-    #  url-base: https://github.com/luberry
-    # Additional modules containing boards/shields/custom code can be listed here as well
-    # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmare
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
-    #- name: zmk
-    #  remote: luberry
-    #  revision: pmw3389
-    #  import: app/west.yml
     - name: zmk
-      remote: urob
-      revision: main
+      remote: petejohanson
+      revision: feat/pointers-move-scroll
       import: app/west.yml
   self:
     path: config

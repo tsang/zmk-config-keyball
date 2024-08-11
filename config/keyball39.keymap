@@ -7,7 +7,6 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
-#define ZMK_MOUSE_SCRL_VAL 140
 
 // Handy to use these tap/holds
 
@@ -35,11 +34,11 @@
             bindings = <&kp LS(DOWN)>, <&kp LS(UP)>;
         };
         scroll_encoder: scroll_encoder {
-	        compatible = "zmk,behavior-sensor-rotate";
+	        compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <0>;
             tap-ms = <5>;
             //bindings = <&kp DOWN>, <&kp UP>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&mwh SCROLL_DOWN>, <&mwh SCROLL_UP>;
         };
     };
     

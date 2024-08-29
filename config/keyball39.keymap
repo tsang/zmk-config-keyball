@@ -49,9 +49,9 @@
         default_layer {
             bindings = < 
 &kp Q           &kp W           &kp E           &kp R           &kp T                                           &kp Y           &kp U           &kp I           &kp O           &kp P
-&kp A           &kp S           &mt LCTRL D     &mt LWIN F      &kp G                                           &kp H           &mt LWIN J      &mt RCTRL K     &kp L           &kp SEMI
+&kp A           &kp S           &mt LCTRL D     &mt LWIN F      &kp G                                           &kp H           &mt LWIN J      &mt RCTRL K     &kp L           &kp RET
 &kp LSHFT       &kp Z           &kp X           &kp C           &kp V                                           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT
-&lt RAISE BSPC                                  &lt LOWER SPACE &mt LALT TAB                    &mt LSHFT DEL   &lt LOWER HOME                                                  &lt RAISE RET
+&kp LCTRL       &kp LALT        &kp LWIN          &mt LALT TAB    &lt LOWER SPACE  &mt LWIN TAB           &mt LSHFT BSPC   &lt LOWER HOME                                      &lt RAISE SEMI
             >;
             sensor-bindings = <&scroll_encoder>;
         };

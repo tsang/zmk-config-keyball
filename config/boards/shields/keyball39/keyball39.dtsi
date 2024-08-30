@@ -41,11 +41,6 @@ RC(3,0) RC(3,1) RC(3,6)   RC(3,3) RC(3,4) RC(3,5)         RC(7,5) RC(7,4)       
             , <&pro_micro 2  GPIO_ACTIVE_HIGH>
             ;
     };
-    
-    trackballs {
-      compatible = "zmk,keymap-trackballs";
-      trackballs = <&trackball>;
-    };
 
     bottom_encoder: encoder_bottom {
         compatible = "alps,ec11";

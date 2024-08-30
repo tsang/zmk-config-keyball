@@ -43,8 +43,8 @@
 };
 
 / {
-  trackballs {
-    compatible = "zmk,keymap-trackballs";
+  trackball_listener {
+    compatible = "zmk,input-listener";
     trackballs = <&trackball>;
   };
 };

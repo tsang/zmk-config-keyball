@@ -1,3 +1,9 @@
-board: [ "nice_nano_v2" ]
-shield: [ "keyball39_left", "keyball39_right", "settings_reset" ]
-snippet: zmk-usb-logging
+include:
+  - board: nice_nano_v2
+    shield: keyball39_left
+    snippet: zmk-usb-logging
+  - board: nice_nano_v2
+    shield: keyball39_right
+    snippet: zmk-usb-logging
+  - board: nice_nano_v2
+    shield: settings_reset

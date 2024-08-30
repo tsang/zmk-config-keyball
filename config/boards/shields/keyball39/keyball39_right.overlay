@@ -42,8 +42,9 @@
 	};
 
 / {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&pmw3360>;
-  };
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&pmw3360>;
+    };
+  }
 };

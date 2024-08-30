@@ -41,3 +41,10 @@
 		//duplex = <2048>; // required by 3-wire spi
 	};
 };
+
+/ {
+  trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&pmw3360>;
+  };
+};

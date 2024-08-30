@@ -31,7 +31,7 @@
 	pinctrl-0 = <&spi0_default>;
 	pinctrl-1 = <&spi0_sleep>;
 	pinctrl-names = "default", "sleep";
-	trackball: trackball@0 {
+	pmw3360: pmw3360@0 {
 		compatible = "pixart,pmw3360";
 		status = "okay";
 		reg = <0>;
@@ -41,4 +41,9 @@
 		//duplex = <2048>; // required by 3-wire spi
 	};
 
+/ {
+  trackball_listener {
+    compatible = "zmk,input-listener";
+    device = <&pmw3360>;
+  };
 };

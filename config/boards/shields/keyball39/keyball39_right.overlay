@@ -45,7 +45,7 @@
         // scroll-layers = <2 3>;
         // automouse-layer = <4>;
     };
-**//
+**/
 
 &pinctrl {
     spi0_default: spi0_default {

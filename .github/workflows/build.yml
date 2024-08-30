@@ -1,5 +1,9 @@
-on: [workflow_dispatch]
-
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [pmw3360]
 jobs:
   build:
     uses: petejohanson/zmk/.github/workflows/build-user-config.yml@core/zephyr-3.5-update

@@ -32,7 +32,7 @@
 	pinctrl-1 = <&spi0_sleep>;
 	pinctrl-names = "default", "sleep";
 	trackball: pmw3360@0 {
-		compatible = "src,pmw3360";
+		compatible = "pixart,pmw3360";
 		status = "okay";
 		reg = <0>;
 		label = "TRACKBALL";
@@ -45,6 +45,6 @@
 / {
   trackball_listener {
     compatible = "zmk,input-listener";
-    device = <&pmw3360>;
+    device = <&trackball>;
   };
 };
